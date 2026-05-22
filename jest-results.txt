@@ -1,0 +1,86 @@
+PASS src/lambdas/auth-server/scope.test.ts (18.2 s)
+PASS src/shared/logger.test.ts (18.247 s)
+PASS src/lambdas/pca-lambda/handler.test.ts (18.263 s)
+PASS src/shared/jwt.test.ts
+PASS src/lambdas/auth-server/jwks.test.ts (18.536 s)
+PASS src/lambdas/auth-server/jti-store.test.ts (18.544 s)
+PASS src/lambdas/lambda-authorizer/handler.test.ts (18.578 s)
+(node:87822) Warning: NodeVersionSupportWarning: The AWS SDK for JavaScript (v3)
+versions published after the first week of January 2027
+will require node >=22. You are running node v20.9.0.
+
+To continue receiving updates to AWS services, bug fixes,
+and security updates please upgrade to node >=22.
+
+More information can be found at: https://a.co/c895JFp
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/lambdas/pca-lambda/jwks.test.ts (18.63 s)
+{"timestamp":"2026-05-21T07:17:09.515Z","level":"ERROR","event":"KMS_GET_PUBLIC_KEY_FAILED","component":"PCA_LAMBDA","correlation_id":"test-correlation","error":"kms_error","error_description":"Failed to retrieve public key from KMS: KMS service unavailable","kms_key_id":"test-pca-key-id-12345"}
+{"timestamp":"2026-05-21T07:17:09.519Z","level":"ERROR","event":"KMS_GET_PUBLIC_KEY_FAILED","component":"PCA_LAMBDA","correlation_id":"test-correlation","error":"kms_error","error_description":"Failed to retrieve public key from KMS: KMS GetPublicKey response did not contain PublicKey material","kms_key_id":"test-pca-key-id-12345"}
+{"timestamp":"2026-05-21T07:17:09.520Z","level":"ERROR","event":"KMS_GET_PUBLIC_KEY_FAILED","component":"PCA_LAMBDA","correlation_id":"test-correlation","error":"kms_error","error_description":"Failed to retrieve public key from KMS: Network timeout","kms_key_id":"test-pca-key-id-12345"}
+{"timestamp":"2026-05-21T07:17:09.546Z","level":"ERROR","event":"DER_PARSE_FAILED","component":"PCA_LAMBDA","correlation_id":"test-correlation","error":"der_parse_error","error_description":"Failed to parse DER-encoded public key: Expected SEQUENCE tag for SubjectPublicKeyInfo","kms_key_id":"test-pca-key-id-12345"}
+PASS src/lambdas/lambda-authorizer/validation.test.ts
+PASS src/lambdas/auth-server/validation.test.ts
+PASS src/lambdas/auth-server/assertion-validation.test.ts
+PASS src/lambdas/pca-lambda/appointments.test.ts
+(node:87829) Warning: NodeVersionSupportWarning: The AWS SDK for JavaScript (v3)
+versions published after the first week of January 2027
+will require node >=22. You are running node v20.9.0.
+
+To continue receiving updates to AWS services, bug fixes,
+and security updates please upgrade to node >=22.
+
+More information can be found at: https://a.co/c895JFp
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:87827) Warning: NodeVersionSupportWarning: The AWS SDK for JavaScript (v3)
+versions published after the first week of January 2027
+will require node >=22. You are running node v20.9.0.
+
+To continue receiving updates to AWS services, bug fixes,
+and security updates please upgrade to node >=22.
+
+More information can be found at: https://a.co/c895JFp
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/lambdas/auth-server/token.test.ts
+PASS src/lambdas/pca-lambda/assertion.test.ts
+PASS src/lambdas/auth-server/handler.test.ts (18.763 s)
+(node:87821) Warning: NodeVersionSupportWarning: The AWS SDK for JavaScript (v3)
+versions published after the first week of January 2027
+will require node >=22. You are running node v20.9.0.
+
+To continue receiving updates to AWS services, bug fixes,
+and security updates please upgrade to node >=22.
+
+More information can be found at: https://a.co/c895JFp
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/lambdas/lambda-authorizer/kms-key-cache.test.ts
+---------------------------|---------|----------|---------|---------|-------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------------|---------|----------|---------|---------|-------------------
+All files                  |   98.82 |    99.13 |     100 |   98.81 |                   
+ lambdas/auth-server       |   99.29 |      100 |     100 |   99.28 |                   
+  assertion-validation.ts  |   95.83 |      100 |     100 |   95.83 | 148               
+  jti-store.ts             |     100 |      100 |     100 |     100 |                   
+  jwks.ts                  |     100 |      100 |     100 |     100 |                   
+  scope.ts                 |     100 |      100 |     100 |     100 |                   
+  token.ts                 |     100 |      100 |     100 |     100 |                   
+  validation.ts            |     100 |      100 |     100 |     100 |                   
+ lambdas/lambda-authorizer |   98.11 |      100 |     100 |   98.11 |                   
+  kms-key-cache.ts         |     100 |      100 |     100 |     100 |                   
+  validation.ts            |   95.83 |      100 |     100 |   95.83 | 141               
+ lambdas/pca-lambda        |     100 |    96.29 |     100 |     100 |                   
+  appointments.ts          |     100 |      100 |     100 |     100 |                   
+  assertion.ts             |     100 |      100 |     100 |     100 |                   
+  jwks.ts                  |     100 |    93.33 |     100 |     100 | 160               
+ shared                    |      96 |      100 |     100 |      96 |                   
+  jwt.ts                   |   95.12 |      100 |     100 |   95.12 | 77,110            
+  logger.ts                |     100 |      100 |     100 |     100 |                   
+---------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 1 skipped, 16 passed, 16 of 17 total
+Tests:       2 skipped, 296 passed, 298 total
+Snapshots:   0 total
+Time:        19.589 s, estimated 21 s
+Ran all test suites.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
+EXIT_CODE=0
